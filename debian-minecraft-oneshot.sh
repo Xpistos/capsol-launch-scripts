@@ -1,7 +1,8 @@
 #!/bin/bash
 mkdir -p /opt/capsolcloud/logs
 touch /opt/capsolcloud/logs/install-oneshot.log
-sysmem = "grep MemTotal /proc/meminfo | awk '{print $2}'"
+#sysmem = "grep MemTotal /proc/meminfo | awk '{print $2}'"
+sysmem=$(grep MemTotal /proc/meminfo | awk '{print $2}')
 {
 
 apt update
