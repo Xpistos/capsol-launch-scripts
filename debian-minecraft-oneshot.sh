@@ -1,9 +1,10 @@
 #!/bin/bash
-
+mkdir -p /opt/capsolcloud/logs
+touch /opt/capsolcloud/logs/install-oneshot.log
 
 if [ -z "$SCRIPT" ]
 then 
-    /var/log/install-oneshot.log /bin/bash -c "$0 $*"
+    /opt/install-oneshot.log /bin/bash -c "$0 $*"
     exit 0
 fi
 
